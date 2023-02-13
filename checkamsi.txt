@@ -1,0 +1,1 @@
+"AmsiScanBuffer" | Out-File C:\Windows\Tasks\amsichecked.txt
